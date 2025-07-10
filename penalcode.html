@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PENAL CODE KALKULÁTOR</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKr6EeffXNDX9kzYZyr5KsyfSB1v9GuZYx5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/penal.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+
+
+
+</head>
+
+<body class="container-fluid" onload="collapseAll()">
+    <h1>PENAL CODE KALKULÁTOR</h1>
+    <div class="tablazat">
+        <table>
+            <tr onclick="toggleTableRow('paragrafus1')">
+                <th class="paragrafus" colspan="6">I. PARAGRAFUS - EMBER ELLEN ELKÖVETETT BŰNCSELEKMÉNYEK
+                </th>
+            </tr>
+            <tr class="paragrafus1 toggleable">
+                <th>Szakasz</th>
+                <th>Megnevezés</th>
+                <th>Bírság <br><span class="perc">((min))</span></th>
+                <th>Bírság <br><span class="perc">((max))</span></th>
+                <th>Jail perc <br><span class="perc">((min))</th>
+                <th>Jail perc <br><span class="perc">((max))</th>
+            </tr>
+            <tr class="paragrafus1 toggleable">
+                <td>1(01)</td>
+                <td>a) Ha egy személy szándékosan, vagy akaratán kívül mást megöl, bűncselekményt követ el.</td>
+                <td colspan="2">/</td>
+                <td colspan="2">/</td>
+            </tr>
+            <tr id="sor3" class="paragrafus1 toggleable" onclick="kijelol(this)">
+                <td>1(01.1)</td>
+                <td><strong> Szándékos emberölés</strong> <br>
+                    a) Ha valaki egy másik ember életét jogosulatlanul, szándékosan és/vagy előre megtervezve veszi el
+                    az
+                    bűncselekményt követ el. </td>
+                <td class="minpenz maxpenz" colspan="2">$200 000</td>
+                <td class="minbunti maxbunti" colspan="2">200 perc</td>
+            </tr>
+            <tr id="sor4" class="paragrafus1 toggleable" onclick="kijelol(this)">
+                <td>1(01.2)</td>
+                <td><strong> Vétlen emberölés </strong><br>
+                    a) Ha valaki egy másik ember életét jogosulatlanul, önhibából azaz nem előre megtervezett szándékkal
+                    veszi el az bűncselekményt követ el.</td>
+                <td class="minpenz maxpenz" colspan="2">$150 000</td>
+                <td class="minbunti maxbunti" colspan="2">150 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus1 toggleable">
+                <td>1(01,PO)</td>
+                <td>Hivatali személy, Peace Officer esetében $300 000 a bírság és 300 perc a börtönbüntetés. </td>
+                <td colspan="2">$300 000</td>
+                <td colspan="2">300 perc</td>
+            </tr>
+            <tr id="sor1" onclick="kijelol(this)" class="paragrafus1 toggleable">
+                <td>1(02)</td>
+                <td><strong>Emberölési kísérlet</strong> <br>
+                    a) Ha egy személy, egy másik személy életét szándékosan veszélyezteti, megpróbálja megölni őt,
+                    bűncselekményt követ el.</td>
+                <td colspan="2">$120 000</td>
+                <td colspan="2">120 perc</td>
+            </tr>
+            <tr id="sor2" onclick="kijelol(this)" class="paragrafus1 toggleable">
+                <td>1(02,PO)</td>
+                <td>Hivatali személy, Peace Officer esetében $200 000 bírság és 200 perc börtönbüntetés.</td>
+                <td colspan="2">$200 000</td>
+                <td colspan="2">200 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus1 toggleable">
+                <td>1(03)</td>
+                <td><strong>Testi sértés</strong> (Óvadék lehetősége) <br>
+                    a) Ha egy személy, egy másik személynek szándékosan sérülést okoz, vétséget követ el.</td>
+                <td colspan="2">/</td>
+                <td colspan="2">/</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus1 toggleable">
+                <td>1(03.1)</td>
+                <td><strong>Könnyű testi sértés</strong> (Óvadék lehetősége) <br>
+                    a) A sértett nem szenved 8 napon túl gyógyuló sérülést. <br> <span class="perc"></span>
+                </td>
+                <td colspan="2">$50 000</td>
+                <td colspan="2">45 perc</td>
+            </tr>
+
+
+            <tr onclick="kijelol(this)" class="paragrafus1 toggleable">
+                <td>1(03.2)</td>
+                <td><strong>Súlyos testi sértés</strong><br>
+                    a) A sértett a helyszínen súlyos sérüléseket szenved.</td>
+                <td colspan="2">$100 000</td>
+                <td colspan="2">75 perc</td>
+            </tr>
+
+            <tr onclick="kijelol(this)" class="paragrafus1 toggleable">
+                <td>1(04)</td>
+                <td><strong>Emberrablás</strong><br>
+                    a) Ha egy személy, egy másik embert, a személyi szabadságától megfosztja, bűncselekményt követ el.​
+                </td>
+                <td colspan="2">$120 000</td>
+                <td colspan="2">120 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus1 toggleable">
+                <td>1(04,PO)</td>
+                <td>Hivatali személy, Peace Officer esetében $170 000 a bírság és 150 perc a börtönbüntetés.</td>
+                <td colspan="2">$170 000</td>
+                <td colspan="2">150 perc</td>
+            </tr>
+            <tr onclick="toggleTableRow('paragrafus2')">
+                <th class="paragrafus" colspan="6">II. PARAGRAFUS - TULAJDON ELLEN ELKÖVETETT BŰNCSELEKMÉNYEK ÉS JOGALAP
+                    NÉLKÜLI GAZDAGODÁS
+                </th>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus2 toggleable">
+                <td>2(01)</td>
+                <td><strong>Tiltott területre való behatolás (Óvadék lehetősége)</strong> <br>
+                    a) Ha egy személy, a Las Venturas Metropolitan Police Department, a San Andreas Sheriff Department
+                    vagy
+                    a Federal Bureau of Investigation által birtokolt, lezárt területre, írásos engedély nélkül belép,
+                    bűncselekményt követ el. ​</td>
+                <td colspan="2">$80 000</td>
+
+                <td colspan="2">45 perc</td>
+            </tr>
+
+            <tr onclick="kijelol(this)" class="paragrafus2 toggleable">
+                <td>2(02)</td>
+                <td><strong>Jármű lopás (Óvadék lehetősége)</strong> <br>
+                    a) Ha valaki más járművébe jogtalanul száll be, majd felszólítsára sem száll ki akkor az vétséget
+                    követ
+                    el.​ <br>b) Ha valaki más járművét jogtalanul eltulajdonítja, elveszi akkor az bűncselekményt követ
+                    el.​</td>
+                <td colspan="2">$90 000</td>
+                <td colspan="2">80 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus2 toggleable">
+                <td> 2(03) </td>
+                <td><strong>Rablás</strong><br>
+                    a) Ha valaki más tulajdonát testi vagy lelki erőszakkal, megfélelmlítéssel eltulajdonítja az
+                    bűncselekményt követ el.​
+                    <br>b) A fegyveres rablás és a rablás nem adható egybe.
+                </td>
+                <td colspan="2">$120 000</td>
+                <td colspan="2">100 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus2 toggleable">
+                <td> 2(04) </td>
+                <td><strong>Fegyveres rablás</strong><br>
+                    a) Ha valaki más tulajdonát akaratának ellenére erőszakkal, lőfegyverrel vagy fegyvernek használt
+                    tárggyal eltulajdonítja az bűncselekményt követ el.​​
+                    <br>b) A fegyveres rablás és a rablás nem adható egybe.
+                </td>
+                <td colspan="2">$150 000</td>
+                <td colspan="2">120 perc</td>
+            </tr>
+
+            <tr onclick="kijelol(this)" class="paragrafus2 toggleable">
+                <td>2(05)</td>
+                <td><strong>Hamisítás (Óvadék lehetősége)</strong> <br>
+                    a) Ha egy személy tudatosan készít, használ olyan dokumentumot amellyel csalást vihet véghez az
+                    bűncselekményt követ el. <br>b) Ha egy személy tudatosan okmányt, egyedi azonosítót hamisít vagy
+                    másol
+                    az bűncselekményt követ el.​</td>
+                <td colspan="2">$90 000</td>
+
+                <td colspan="2">90 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus2 toggleable">
+                <td>2(06)</td>
+                <td><strong>Rongálás</strong> <br>
+                    a) Ha egy személy egy másik személy tulajdonában tudatosan $10 000 alatti kárt okoz az vétséget
+                    követ
+                    el.​ <br>b) Ha egy személy egy másik személy tulajdonában tudatosan $10 000 fölötti kárt okoz az
+                    bűncselekményt követ el.​ </td>
+
+                <td colspan="2">$60 000</td>
+
+                <td colspan="2">/</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus2 toggleable">
+                <td>2(06.b)</td>
+                <td><strong>Rongálás</strong> <br>
+                    2(06.b) esetén a börtönbüntetés <span class="emeles">30 perc.</span> <br>Ha a személy a kárt teljes
+                    mértékben megtéríti akkor a bírságról a Peace Officer szabadon dönthet.​ </td>
+                <td colspan="2">$60 000</td>
+                <td colspan="2">30 perc</td>
+
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus2 toggleable">
+                <td> 2(07) </td>
+                <td><strong>Betörés</strong><br>
+                    a) Ha egy személy más ingatlanjába, magánterületére erőszakkal vagy fenyegető jelleggel lép be,
+                    illetve
+                    marad ott, az bűncselekményt követ el.<br>
+                    b) Ha egy személy felfegyverkezve más ingatlanjába, magánterületére erőszakkal vagy fenyegető
+                    jelleggel
+                    lép be, illetve marad ott az bűncselekményt követ el.
+                </td>
+                <td colspan="2">$100 000</td>
+                <td colspan="2">100 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus2 toggleable">
+                <td>2(07.b)</td>
+                <td><strong>Betörés</strong><br>
+                    Felfegyverkezett betörés esetében a bírság $90 000 és a börtönbüntetés 120 perc.
+                </td>
+                <td colspan="2">$120 000</td>
+                <td colspan="2">120 perc</td>
+            </tr>
+            <tr onclick="toggleTableRow('paragrafus3')">
+                <th class="paragrafus" colspan="6">III. PARAGRAFUS - FEGYVEREKKEL, KÁBÍTÓ ÉS- BÓDÍTÓSZEREKKEL
+                    KAPCSOLATOS
+                    BŰNCSELEKMÉNYEK
+                </th>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus3 toggleable">
+                <td>3(01)</td>
+                <td><strong>Kábítószer birtoklás</strong> <br>
+                    a) Ha egy személy kenderszármazéktól eltérő kábítószert birtokol az vétséget követ el. <br>
+                    b) Aki 0.85 uncia (25g) mértéket meghaladó kenderszármazékot (Füves cigi, hasis, szárított
+                    marihuána) fogyaszt vagy birtokol, vétség miatt büntetendő.
+                    <br>
+                    A 0.85 uncia mértéket meg nem haladó kenderszármazék fogyasztás vagy birtoklás nem büntetendő. (( 5
+                    db )) <br>
+                    c) Ha egy személy kábítószer alapanyagot birtokol az vétséget követ el.​​"
+                </td>
+                <td colspan="2" id="kabito">$130 000</td>
+                <td colspan="2">90 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus3 toggleable">
+                <td>3(02)</td>
+                <td><strong>Kábítószer kereskedelem</strong> <br>
+                    a) Ha egy személy kábítószert ad el vagy eladási céllal birtokol az bűncselekményt követ el.​ <br>
+                    b) Kereskedelmi mennyiségnek számít a 1.80 uncia (50 gramm) feletti mennyiség. (( 10 db ))</td>
+                <td colspan="2">$150 000</td>
+                <td colspan="2">120 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus3 toggleable">
+                <td>3(03)</td>
+                <td><strong>Engedély nélküli/illegális kábítószer termesztés</strong> <br>
+                    a) Ha egy személy engedély nélkül termeszt marihuánát az vétséget követ el. <br>
+                    b) Ha egy személy kenderszármazéktól eltérő, kábítószer hatású növényt termeszt az vétséget követ
+                    el.</td>
+                <td colspan="2">$80 000</td>
+                <td colspan="2">70 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus3 toggleable">
+                <td>3(04)</td>
+                <td><strong>Tiltott tárgy birtoklása</strong> <br>
+                    a) Ha egy személy államilag tiltott tárgyat birtokol az vétséget követ el.​ <br>
+                    b) Ide sorolandó: Tervrajz <br> Az eszközt azonnal el kell kobozni és meg kell semmisíteni.
+                    <br> <span class="perc">$80 000 /
+                        db</span>
+                </td>
+                <td colspan="2" id="targy" class="irhato" contenteditable="true"></td>
+                <td colspan="2">/</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus3 toggleable">
+                <td>3(04.1)</td>
+                <td><strong>Tiltott tárolóeszköz birtoklása (Óvadék lehetősége)</strong> <br>
+                    a) Ha valaki államilag tiltott tárolóeszközt birtokol, az bűncselekményt követ el. <br>
+                    b) Ide sorolandó: drogot, drog alapanyagot, lőszert, fegyvert, fegyveralkatrészt,
+                    tervrajzot tartalmazó ládák. <br> <span class="perc">$30 000 /
+                        db</span>
+                </td>
+                <td colspan="2" id="targy" class="irhato" contenteditable="true"></td>
+                <td colspan="2">60 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus3 toggleable">
+                <td>3(05)</td>
+                <td><strong>Illegális lőfegyver birtoklása</strong> <br>
+                    a) Ha egy személy Államilag tiltott lőfegyvert birtokol az bűncselekményt követ el.​ <br>
+                    b) Illegális lőfegyvernek minősül: <i class="szurke">
+                        AR-15, AK-74, M4A1, Micro Draco,AK-47, M4, Sniper, Country Rifle,
+                        Shotgun, Desert Eagle, SPAZ, Sawed-Off, Silenced, Tec-9, Uzi, P90, MP5, MP7, Remington 870,
+                        Benelli
+                        M4, M14, Mozin, Dragunov, Remington M700, M110.
+                    </i> <br>
+                    c) Továbbá ide sorolható a <i class="szurke">
+                        Molotov, Flashbang,Füstgránát</i>.​
+
+                </td>
+                <td colspan="2">$170 000</td>
+                <td colspan="2">120 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus3 toggleable">
+                <td>3(06)</td>
+                <td><strong>Illegális fegyverkereskedelem</strong> <br>
+                    a) Ha egy személy Államilag tiltott fegyvert eladásra kínál, vagy vásárol az bűncselekményt követ
+                    el.​
+                </td>
+                <td colspan="2">$200 000</td>
+                <td colspan="2">150 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus3 toggleable">
+                <td>3(07)</td>
+                <td><strong>Engedély nélküli fegyver birtoklása (Óvadék lehetősége)</strong> <br>
+                    a) Ha egy személy engedély nélküli fegyvert birtokol (Glock 17, Glock 19, HP USP 45, Colt 1911, Colt
+                    45, Vipera, Boxer, S&W 66, Kés) az bűncselekményt követ el.
+                    ​​<br>
+                </td>
+                <td colspan="2">$120 000</td>
+                <td colspan="2">90 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus3 toggleable">
+                <td>3(08)</td>
+                <td><strong>Engedély nélküli töltény birtoklása</strong> <br>
+                    a) Ha egy személy engedélyhez kötött fegyverhez tartozó töltényt birtokol, úgy, hogy az engedély
+                    nincsen
+                    a tulajdonában bűncselekményt követ el.​ <br>
+                    b) Ha egy személy engedélyhez kötött fegyverhez tartozó töltényt nagyobb mennyiségben birtokol mint
+                    az
+                    Állam által engedélyezett mennyiség bűncselekményt követ el.​ <br>
+                    A maximum bírság $100 000. | <span class="perc">$1 500 / db</span>
+                </td>
+                <td colspan="2" id="tolteny" class="irhato" contenteditable="true"></td>
+                <td colspan="2">60 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus3 toggleable">
+                <td>3(09)</td>
+                <td><strong>Nyílt fegyverviselés</strong> <br>
+                    a) Ha egy személy megfelelő felhatalmazás nélkül, látható módon viseli lőfegyverét, az vétséget
+                    követ
+                    el. <br>
+                    <b class="viseles">Első alkalom</b>
+                </td>
+                <td colspan="2">$70 000</td>
+                <td colspan="2">/</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus3 toggleable">
+                <td>3(09)</td>
+                <td><strong>Nyílt fegyverviselés</strong><br>
+                    <b class="viseles">Második alkalom</b>
+                </td>
+                <td colspan="2">$120 000</td>
+                <td colspan="2">/</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus3 toggleable">
+                <td>3(09)</td>
+                <td><strong>Nyílt fegyverviselés</strong> <br>
+                    Harmadik alkalom utáni visszaélés esetén a fegyverengedély
+                    bevonható. <br>
+                    <b class="viseles">Harmadik alkalom</b>
+                </td>
+                <td colspan="2">$180 000</td>
+                <td colspan="2">/</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus3 toggleable">
+                <td>3(10)</td>
+                <td><strong>Illegális fegyverhez tartozó töltény árusítása (Óvadék lehetősége)</strong> <br>
+                    a) Ha egy személy az Állam által illegálisnak minősített lőfegyverhez tartozót töltényeket árúsít
+                    akkor
+                    bűncselekményt követ el.​​<br>
+                    A maximum bírság $120 000. | <span class="perc">$1 600 / db</span>
+                </td>
+                <td colspan="2" id="loszer" class="irhato" contenteditable="true"></td>
+                <td colspan="2">90 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus3 toggleable">
+                <td>3(11)</td>
+                <td><strong>Fegyveralkatrészek birtoklása (Óvadék lehetősége)</strong> <br>
+                    a) San Andreas Állam területén aki fegyveralkatrészt birtokol az vétséget követ el.​​<br><span
+                        class="perc">$6000/db</span>
+                </td>
+                <td colspan="2" class="irhato" contenteditable="true"></td>
+                <td colspan="2">60 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus3 toggleable">
+                <td>3(12)</td>
+                <td><strong>Fegyveralkatrész kereskedelem (Óvadék lehetősége)</strong> <br>
+                    a) San Andreas Állam területén aki fegyveralkatrészt árusít az bűncselekményt követ el.​​<br>
+                </td>
+                <td colspan="2">$60 000</td>
+                <td colspan="2">80 perc</td>
+            </tr>
+
+
+
+
+
+
+
+
+
+            <tr onclick="toggleTableRow('paragrafus4')">
+                <th class="paragrafus" colspan="6">IV. PARAGRAFUS - KÖZJÓ ELLEN ELKÖVETETT BŰNCSELEKMÉNYEK
+                </th>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus4 toggleable">
+                <td> 4(01) </td>
+                <td><strong>Prostitúció (Óvadék lehetősége)</strong><br>
+                    a) Ha egy személy jutattásért vagy pénzért cserébe szexuális aktust végez vagy kínál fel az
+                    bűncselekményt követ el.
+                </td>
+                <td colspan="2">$80 000</td>
+                <td colspan="2">90 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus4 toggleable">
+                <td> 4(02) </td>
+                <td><strong>Prostitúcióra való felbujtás (Óvadék lehetősége)</strong><br>
+                    a) Ha egy személy juttatást vagy pénzt ajánl fel szexuális aktusért az bűncselekményt követ el.
+                </td>
+                <td colspan="2">$60 000</td>
+                <td colspan="2">60 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus4 toggleable">
+                <td> 4(03) </td>
+                <td><strong>Szexuális zaklatás</strong><br>
+                    a) Ha egy személy valakit szóban, írásban vagy szociális médián szexuálisan zaklat az vétséget követ
+                    el.
+                </td>
+                <td colspan="2">$50 000</td>
+                <td colspan="2">50 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus4 toggleable">
+                <td>4(04)</td>
+                <td><strong>Szexuális erőszak</strong><br>
+                    a) Ha egy személy valakit akarata ellenére vagy beleegyezés nélkül szexuálisan megérint az
+                    bűncselekményt követ el.
+                </td>
+                <td colspan="2">$60 000</td>
+                <td colspan="2">90 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus4 toggleable">
+                <td> 4(05) </td>
+                <td><strong>Nemi erőszak</strong><br>
+                    a) Ha egy személy valakit akarata ellenére szexuális aktusra kényszerít az bűncselekményt követ
+                    el.​<br>
+                    b) Ha egy személy valakit annak beleegyezése nélkül szexuális aktusra kényszerít az bűncselekményt
+                    követ
+                    el.
+                </td>
+                <td colspan="2">$100 000</td>
+                <td colspan="2">120 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus4 toggleable">
+                <td>4(06)</td>
+                <td><strong>Bűnrészesség</strong><br>
+                    a) Ha egy személy valakit egy bűncselekmény elkövetésére buzdít az bűncselekményt követ el.​<br>
+                    b) Ha egy személy valakit egy vétség elkövetésére buzdít az vétséget követ el.
+                </td>
+                <td colspan="4"><b>
+                        Az adott bekezdés adott <br>
+                        pontjának fele a büntetés
+                    </b></td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus4 toggleable">
+                <td>4(07)</td>
+                <td><strong>Garázdaság</strong> <br>
+                    a) Azok a személyek akik rosszindulatúan és szándékosan megzavarják bármely más embertársuk békéjét
+                    vagy
+                    nyugalmát, vétséget követnek el.​
+                </td>
+                <td colspan="2">$62 500</td>
+                <td colspan="2">45 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus4 toggleable">
+                <td>4(08)</td>
+                <td><strong>Horgászengedély bemutatásának elmulasztása</strong> <br>
+                    a) Ha egy személy tudatosan elmulasztja a horgászengedély érvényességének meghosszabbítását,
+                    vétséget követ el.
+                </td>
+                <td colspan="2">$50 000</td>
+                <td colspan="2">/</td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr onclick="toggleTableRow('paragrafus5')">
+                <th class="paragrafus" colspan="6">V. PARAGRAFUS - KÖZBIZTONSÁG ÉS- KÖZIGAZSÁG ELLENI BŰNCSELEKMÉNYEK
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus5 toggleable">
+                <td> 5(01) </td>
+                <td><strong>Vesztegetés</strong><br>
+                    a) Ha egy személy juttatást, pénzt vagy egyéb javakat ajánl fel a Peace Officernek vagy hivatali
+                    dolgozónak akkor bűncselekményt követ el.
+                </td>
+                <td colspan="2">$100 000</td>
+                <td colspan="2">90 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus5 toggleable">
+                <td> 5(02) </td>
+                <td><strong>Hatóság előli menekülés gyalogosan</strong><br>
+                    a) Ha egy személy szándékosan felelősségre vonás elkerülése végett gyalogosan elmenekül a Peace
+                    Officer
+                    elől akkor bűncselekményt követ el.
+                </td>
+                <td colspan="2">$80 000</td>
+                <td colspan="2">60 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus5 toggleable">
+                <td> 5(03) </td>
+                <td><strong>Hatóság előli menekülés gépjárművel</strong><br>
+                    a) Ha egy személy szándékosan felelősségre vonás elkerülése végett gépjárművel elmenekül a Peace
+                    Officer
+                    elől akkor bűncselekményt követ el.
+                </td>
+                <td colspan="2">$150 000</td>
+                <td colspan="2">120 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus5 toggleable">
+                <td> 5(04) </td>
+                <td><strong>Hivatali személy félrevezetése</strong><br>
+                    a) Ha valaki szándékosan hamis információt ad át a Peace Officernek / egyéb hivatali személynek az
+                    bűncselekményt követ el.
+                    <br>
+                    b) Ha valaki hamis bejelentést tesz a hatóságoknál, az bűncselekményt követ el.
+                    <br>
+                </td>
+                <td colspan="2">$60 000</td>
+                <td colspan="2">60 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus5 toggleable">
+                <td> 5(05) </td>
+                <td><strong>Jogtalan gyülekezés</strong><br>
+                    a) Ha valaki a Peace Officer vagy telek tulajdonos többszöri felszólítására sem hagyja el az állami
+                    tulajdonban lévő területet, az vétséget követ el.​<br>
+                    b) Ha valaki a Peace Officer felszólítására nem hagyja el a lezárt területet, az vétséget követ
+                    el.​<br>
+                    c) Ha egy csoport bejelentetlenül gyülekezik vagy demonstrál abban az esetben az esemény szervezői
+                    vétséget követnek el.
+                </td>
+                <td colspan="2">$70 000</td>
+                <td colspan="2">/</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus5 toggleable">
+                <td>5(06)</td>
+                <td><strong>Hivatali személy munkájának akadályozása (Óvadék lehetősége)</strong> <br>
+                    a) Ha valaki szándékosan akadályozza a Peace Officer munkáját, az vétséget követ el.​<br>
+                    b) Ha valaki tudatosan megtagadja a Peace Officer parancsát, az vétséget követ el.​​</td>
+                <td colspan="2">$80 000</td>
+                <td colspan="2">70 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus5 toggleable">
+                <td> 5(07) </td>
+                <td><strong>Fogolyszökés (Óvadék lehetősége)</strong><br>
+                    a) Ha valaki a büntetésvégrehajtási intézetből, fogdából vagy rendőri őrizetből megszökik az
+                    bűncselekményt követ el.
+                </td>
+                <td colspan="2">$100 000</td>
+                <td colspan="2">100 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus5 toggleable">
+                <td> 5(08) </td>
+                <td><strong>Fogolyszöktetés</strong><br>
+                    a) Ha valaki a büntetésvégrehajtási intézetből, fogdából vagy rendőri őrizetből a szökést bármilyen
+                    módon elősegíti az bűncselekményt követ el.
+                </td>
+                <td colspan="2">$200 000</td>
+                <td colspan="2">150 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus5 toggleable">
+                <td>5(09)</td>
+                <td><strong>Jogosulatlan címhasználat</strong> <br>
+                    a) Aki mások előtt őt meg nem illető címet használ, illetve kitüntetést vagy egyenruhát
+                    jogosulatlanul
+                    visel az vétséget követ el.​​</td>
+                <td colspan="2">$65 000</td>
+                <td colspan="2">40 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus5 toggleable">
+                <td>5(10)</td>
+                <td><strong>Határsértés</strong><br>
+                    a) Aki a megyehatárt illegálisan vagy nem szabályosan lépi át az vétséget követ el.​
+                </td>
+                <td colspan="2">$80 000</td>
+                <td colspan="2">60 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus5 toggleable">
+                <td> 5(11) </td>
+                <td><strong>Személyazonosság igazolásának elmulasztása</strong><br>
+                    a) Aki nem tudja egy fényképes igazolvánnyal személyazonosságát igazolni az vétséget követ el.
+                </td>
+                <td colspan="2">$40 000</td>
+                <td colspan="2">/</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus5 toggleable">
+                <td> 5(12) </td>
+                <td><strong>Bűnszervezetben való bűncselekmény elkövetés</strong><br>
+                    a) Olyan személy akiről egy kiterejdt nyomozást követően megállapítható, hogy szervezett bűnözői
+                    csoport tagja, bűncselekménnyel vádolható.
+                </td>
+                <td colspan="2">$80 000</td>
+                <td colspan="2">60 perc</td>
+            </tr>
+            <tr onclick="toggleTableRow('paragrafus6')">
+                <th class="paragrafus" colspan="6">VI. PARAGRAFUS - KÖZLEKEDÉSI BŰNCSELEKMÉNYEK
+                </th>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus6 toggleable">
+                <td>6(01)</td>
+                <td><strong>Vezetői engedély nélküli vezetés</strong> <br>
+                    a) Ha valaki tudatosan vezetői engedély nélkül gépjárművet arra jogosulatlanul vezet, az vétséget
+                    követ el.</td>
+                <td colspan="2">$50 000</td>
+                <td colspan="2">/</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus6 toggleable">
+                <td>6(02)</td>
+                <td><strong>Közúti baleset okozása</strong><br>a) Ha valaki szándékosan vagy
+                    önhibájából adódóan közúti
+                    balesetet okoz az vétséget követ el. ​</td>
+
+                <td colspan="2">$50 000</td>
+                <td colspan="2">/</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus6 toggleable">
+                <td>6(02.1))</td>
+                <td><strong>Halálos közúti baleset okozása</strong> <br>
+                    a) Ha valaki szándékosan vagy önhibájából adódóan halálos közúti balesetet okoz, az bűncselekményt
+                    követ
+                    el.​ <br>
+                    <b>Nem adható egybe mással a VI. paragrafusból!</b>
+                </td>
+                <td colspan="2">$80 000 <br> + Vezetői engedély bevonása.</td>
+
+                <td colspan="2">90 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus6 toggleable">
+                <td>6(02.2)</td>
+                <td><strong>Cserbenhagyásos közúti baleset okozása</strong> <br>
+                    Ha sofőr a sértettet szándékosan cserbenhagyja, nem győződik meg a baleset tagjainak testi
+                    épségéről,
+                    bűncselekményt követ el.​<br>
+                    <b>Nem adható egybe mással a VI. paragrafusból!</b>
+                </td>
+                <td colspan="2">$60 000 <br> + jogosítvány bevonása.</td>
+                <td colspan="2">60 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus6 toggleable">
+                <td>6(02.3)</td>
+                <td><strong>Cserbenhagyásos halálos közúti baleset okozása </strong> <br>
+                </td>
+                <td colspan="2">$100 000 <br> + jogosítvány bevonása.</td>
+                <td colspan="2">100 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus6 toggleable">
+                <td>6(03)</td>
+                <td><strong>Közlekedési táblák/lámpák figyelmenkívül hagyása</strong> <br>
+                    a) Ha egy személy a gépjárművével figyelmen kívül hagyja a közlekedési táblákat/közlekedési
+                    lámpákat,
+                    szabálysértést követ el.</td>
+                <td colspan="2">$30 000</td>
+                <td colspan="2">/</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus6 toggleable">
+                <td>6(04)</td>
+                <td><strong>Gondatlan vezetés</strong> <br>
+                    a) Ha egy személy veszélyesen, közúti szabályokat szeg, tudatosan gyorsan hajt, mások vagy a saját
+                    testi épségét veszélyeztetően vezet vagy a járművének állapota nem megfelelő az szabálysértést követ
+                    el. <br>
+                    b) Ha egy személy bukósisak nélkül vezet egy motorkerékpárt, gondatlan vezetésnek minősül.​
+                    ​</td>
+
+                <td colspan="2">$50 000</td>
+                <td colspan="2">/</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus6 toggleable">
+                <td>6(05)</td>
+                <td><strong>Nitro-dioxid, neonfény, színezett izzó beszerelése</strong> <br>
+                    a) Ha valaki a gépjárműbe nitro-dioxidot szerel az szabálysértést követ el.​ <br>
+                    b) Ha valaki autójára neonfényt szerel az szabálysértést követ el.​ <br>
+                    c) Ha valaki a gépjárműve izzóját színezi az szabálysértést követ el.​ <br>
+                    Engedélyezett izzó színek: Xenon, Kadmiumsárga</td>
+                <td colspan="2">$40 000</td>
+                <td colspan="2">/</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus6 toggleable">
+                <td>6(06)</td>
+                <td><strong>Utcai versenyzés</strong> <br>
+                    a) Ha egy személy a közutakon, nyilvános helyeken, engedély nélkül utcai versenyt szervez, vétséget
+                    követ el.​ <br>
+                    b) Ha egy személy, utcai versenyen vesz részt, ezzel veszélyeztetve mások és saját testi épségét és
+                    életét, vétséget követ el.​
+                </td>
+                <td colspan="2">$60 000 <br> + jogosítvány bevonása.</td>
+                <td colspan="2">/</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus6 toggleable">
+                <td>6(07)</td>
+                <td><strong>Gázolás</strong> <br>
+                    a) Ha egy személy egy gyalogost szándékosan vagy önhibájából elgázol, az bűncselekményt követ el.
+                </td>
+                <td colspan="2">$70 000 <br> + jogosítvány bevonása.</td>
+                <td colspan="2">/</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus6 toggleable">
+                <td>6(08)</td>
+                <td><strong>Forgalmi engedély hiánya</strong> <br>
+                    a) Ha valaki tudatosan forgalmi engedély nélkül gépjárművet közúton vezet, az vétséget követ el.
+                    <br>
+                    <span class="szurke">​A forgalmi matrica a forgalmi lappal együtt érvényes.</span>
+                </td>
+                <td colspan="2">$35 000</td>
+                <td colspan="2">/</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus6 toggleable">
+                <td>6(09)</td>
+                <td><strong>Telefonálás vezetés közben</strong> <br>
+                    a) Ha egy személy vezetés közben telefonál, ezzel veszélyeztetve a közlekedés más résztvevőit vagy a
+                    saját testi épségét, az szabálysértést követ el.
+                </td>
+                <td colspan="2">$26 000</td>
+                <td colspan="2">/</td>
+            </tr>
+            <tr onclick="toggleTableRow('paragrafus7')">
+                <th class="paragrafus" colspan="6">VII. PARAGRAFUS - SZÖVETSÉGI BŰNCSELEKMÉNYEK
+                </th>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus7 toggleable">
+                <td> 7(01) </td>
+                <td><strong>Közszolgálati korrupció</strong><br>
+                    a) Ha a Peace Officer előnyhöz jutatt valakit pénz, tárgy vagy egyéb javakért cserébe akkor
+                    bűncselekményt követ el.​​<br>
+                    b) Ha egy Peace Officer szolgálatteljesítés közben bűncselekményt követ el.
+                </td>
+                <td colspan="2">$150 000</td>
+                <td colspan="2">180 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus7 toggleable">
+                <td> 7(02) </td>
+                <td><strong>Hatalommal való visszaélés</strong><br>
+                    a) Ha egy hivatali személy a hatalmával visszaél úgy, hogy ez más állampolgár lelki nyugalmára
+                    és/vagy
+                    fizikai egészségére hátrányos hatással van bűncselekményt követ el.​​​<br>
+                    b) Ha egy hivatali személy a hatalmával visszaél úgy, hogy ez a közbiztonságot hátrányosan
+                    befolyásolja
+                    bűncselekményt követ el.
+                </td>
+                <td colspan="2">$120 000</td>
+                <td colspan="2">120 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus7 toggleable">
+                <td> 7(03) </td>
+                <td><strong>Bankautomata rablás</strong><br>
+                    a) Ha valaki egy bankárcéghez, bankfiókhoz tartozó automatát próbál meg vagy foszt ki az
+                    bűncselekményt követ el.​ <br>
+                    b)​ Ha az ATM elleni bűncselekmény a bank területén történik, akkor a bankrablásra vonatkozó
+                    szabályozás alkalmazandó. <br>
+                    <b>Ha valakinek festékes az arca az is ide sorolandó.</b>
+                </td>
+                <td colspan="2">$200 000</td>
+                <td colspan="2">240 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus7 toggleable">
+                <td>7(04)</td>
+                <td><strong>Aranybank rablás</strong> <br>
+                    a) Ha valaki egy bankfiók területén rablást követ el, a bankfiókból valutát próbál meg
+                    eltulajdonítani az bűncselekményt követ el.​​
+
+                </td>
+                <td colspan="2">$300 000</td>
+                <td colspan="2">300 perc</td>
+            </tr>
+
+
+
+
+
+
+
+
+            <tr onclick="toggleTableRow('paragrafus8')">
+                <th class="paragrafus" colspan="6">VIII. PARAGRAFUS - ADÓZÁSSAL KAPCSOLATOS BŰNCSELEKMÉNYEK
+                </th>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus8 toggleable">
+                <td> 8(01) </td>
+                <td><strong>Nyilvántartásba vételi kötelezettség elmulasztása (Óvadék lehetősége)</strong><br>
+                    a) Aki nyilvántartásba vételhez kötötten működtethető jogi személyt, jogi személyiséggel nem
+                    rendelkező jogalanyt nyilvántartásba vételi kötelezettségének elmulasztásával üzemeltet, vétség
+                    miatt büntetendő.
+                </td>
+                <td colspan="2">$120 000</td>
+                <td colspan="2">60 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus8 toggleable">
+                <td>8(02)</td>
+                <td><strong>Üzletlezárás akadályozása</strong> <br>
+                    a) Aki üzletének lezárását akadályozza, vétség miatt büntetendő.​</td>
+                <td colspan="2">$50 000</td>
+                <td colspan="2">/</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus8 toggleable">
+                <td>8(03)</td>
+                <td><strong>Adóköteles tevékenység folytatása adószám hiányában (Óvadék lehetősége)</strong> <br>
+                    a) Aki adószámhoz kötött adóköteles tevékenységet adószám hiányában folytat, vétség miatt
+                    büntetendő.
+                    <br> <span class="perc">((45 - 60 perc))</span>​
+                </td>
+                <td colspan="2">$100 000</td>
+                <td>45 perc</td>
+                <td>60 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus8 toggleable">
+                <td>8(04)</td>
+                <td><strong>A foglalkoztatott bejelentésére vonatkozó szabályok megsértése</strong><br>
+                    a) Az adózót mulasztási bírsággal kell sújtani, ha be nem jelentett foglalkoztatottat alkalmaz vagy
+                    alkalmazott.
+                </td>
+                <td colspan="2">$40 000</td>
+                <td colspan="2">/</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus8 toggleable">
+                <td>8(05)</td>
+                <td><strong>Számlakibocsátási kötelezettség, valamint iratmegőrzési kötelezettség szabályainak
+                        megsértése</strong><br>
+                    Az adóhatóság az adózót mulasztási bírsággal sújthatja, ha​
+                    a) számlakibocsátási kötelezettségét elmulasztja vagy a számlát nem a tényleges ellenértékről
+                    állítja ki, vagy
+                    b) iratmegőrzési kötelezettségének nem tesz eleget.
+                </td>
+                <td colspan="2">$100 000</td>
+                <td colspan="2">/</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus8 toggleable">
+                <td>8(06)</td>
+                <td><strong>Adatváltozás bejelentésének elmulasztása</strong><br>
+                    a) Az adóhatóság az adózót mulasztási bírsággal sújthatja, ha adatváltozást nem jelenti az
+                    adóhatóság felé.
+                </td>
+                <td colspan="2">$30 000</td>
+                <td colspan="2">/</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus8 toggleable">
+                <td>8(07)</td>
+                <td><strong>Szerződésszegés</strong><br>
+                    a) Az adóhatóság az adózót mulasztási bírsággal sújthatja, bármely szerződésszerű kötelezettség
+                    teljesítésének az elmulasztása esetén. Szerződésszegés esetén a sérelmet szenvedett fél jogosult a
+                    szolgáltatás teljesítésének követelésére.
+                    <br> <span class="perc">(($50 000 - $100 000))</span>
+                </td>
+                <td>$50 000</td>
+                <td>$100 000</td>
+                <td colspan="2">/</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus8 toggleable">
+                <td>8(08)</td>
+                <td><strong>Pénzmosás</strong><br>
+                    a) Aki a büntetendő cselekményből származó vagyon eredetét, a vagyonon fennálló jogot, a vagyon
+                    helyét, ezek változását elfedi, elleplezi vagy átveszi, bűntett miatt büntetendő.
+                    <br> <span class="perc">(($100 000 - $180 000))</span>
+                </td>
+                <td>$100 000</td>
+                <td>$180 000</td>
+                <td colspan="2">120 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus8 toggleable">
+                <td>8(09)</td>
+                <td><strong>Csalás</strong><br>
+                    a) Aki jogtalan haszonszerzés végett mást tévedésbe ejt, vagy tévedésben tart, és ezzel kárt okoz,
+                    vétség miatt büntetendő.
+                    <br> <span class="perc">(($60 000 - $80 000))</span>
+                </td>
+                <td>$60 000</td>
+                <td>$80 000</td>
+                <td colspan="2">/</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus8 toggleable">
+                <td>8(10)</td>
+                <td><strong>Adócsalás</strong><br>
+                    a) Aki költségvetésbe történő befizetési kötelezettségét vagy költségvetésből származó pénzeszközök
+                    vonatkozásában mást tévedésbe ejt, tévedésben tart, valótlan tartalmú nyilatkozatot tesz, vagy a
+                    valós tényt elhallgatja, bűntett miatt büntetendő.
+                    <br> <span class="perc">(($100 000 - $200 000 | 60 - 120 perc))</span>
+                </td>
+                <td>$100 000</td>
+                <td>$200 000</td>
+                <td>60 perc</td>
+                <td>120 perc</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus8 toggleable">
+                <td>8(11)</td>
+                <td><strong>Késedelmi pótlék</strong><br>
+                    a) Az adó késedelmes megfizetése esetén az esedékesség napját követő naptól, mint kezdőnaptól az adó
+                    tényleges megfizetésének napjáig késedelmi pótlékot kell fizetni. Az esedékesség napja minden hónap
+                    tízedik naptári napja. A késedelmi pótlék-fizetési kötelezettség utolsó napja az üzletlezárás
+                    feloldásának napja.​ <br>
+                    b) A késedelmi pótlék mértéke a késedelembe esés napján fennálló adótartozás tíz százaléka.​ <br>
+                    c) A késedelmi pótlék az adó tényleges megfizetéséig naptári naponként esedékes.​ <br>
+                    d) Az adóhatóság külön döntés meghozatala és az erről való tájékoztatás nélkül az adószámlán előírja
+                    a késedelmi pótlékot.
+                </td>
+                <td colspan="2">/</td>
+                <td colspan="2">/</td>
+            </tr>
+            <tr onclick="kijelol(this)" class="paragrafus8 toggleable">
+                <td>8(12)</td>
+                <td><strong>Üzletlezárás elrendelése</strong><br>
+                    (1) Az adóhatóság az adóköteles tevekénység célját szolgáló helyiséget az esedékesség napját követő
+                    naptól, mint kezdőnaptól a késedelmi díjjal terhelt esedékes adó tényleges megfizetésének napjáig
+                    lezárja. A késedelmi pótlék-fizetési kötelezettség utolsó napja az üzletlezárás feloldásának napja.​
+                    <br>
+                    (2) Az adóhatóság mulasztási bírság kiszabása mellett az adóköteles tevékenység célját szolgáló
+                    helyiséget hét nyilvántartási napra lezárhatja, ha az adózó <br>
+                    a) be nem jelentett foglalkoztatottat foglalkoztat vagy foglalkoztatott, <br>
+                    b) az adóköteles tevékenység célját szolgáló helyiségben elmulasztotta számlakibocsátási
+                    kötelezettségét, <br>
+                    c) nyilvántartásba vételi kötelezettségét elmulasztja.
+                </td>
+                <td colspan="2">/</td>
+                <td colspan="2">/</td>
+            </tr>
+            <tr onclick="toggleTableRow('paragrafus9')">
+                <th id="rendelet" class="paragrafus" colspan="6">RENDELETEK
+                </th>
+            </tr>
+            <tr class="paragrafus9 toggleable">
+                <td class="balra" colspan="6"><a class="rendeletek" target="_blank"
+                        href="https://forum.see-game.com/threads/liveries-act-of-2023.376723/">LIVERIES ACT</a> -
+                    Illegális gépjármű felfestések és matricák San Andreas Állam területén.</td>
+            </tr>
+            <tr class="paragrafus9 toggleable">
+                <td class="balra" colspan="6"><a class="rendeletek" target="_blank"
+                        href="https://forum.see-game.com/threads/firearms-carry-and-licensing-act-of-2023.376114/">FIREARMS
+                        CARRY AND LICENSING ACT</a> - Lőfegyverengedélyezési és viselési törvény.</td>
+            </tr>
+            <tr class="paragrafus9 toggleable">
+                <td class="balra" colspan="6"><a class="rendeletek" target="_blank"
+                        href="https://forum.see-game.com/threads/racketeering-influenced-corrupt-organizations-act.328535/">RACKETEERING
+                        INFLUENCED CORRUPT ORGANIZATIONS ACT</a> - Meghatározás a bűnszervezetek formáira.</td>
+            </tr>
+            <tr class="paragrafus9 toggleable">
+                <td class="balra" colspan="6"><a class="rendeletek" target="_blank"
+                        href="https://forum.see-game.com/threads/marijuana-sales-and-use-act.310060/">MARIJUANA SALES
+                        AND USE ACT</a> - Meghatározás és szabályozás a marihuána fogyasztására és értékesítésére.</td>
+            </tr>
+            <tr class="paragrafus9 toggleable">
+                <td class="balra" colspan="6"><a class="rendeletek" target="_blank"
+                        href="https://forum.see-game.com/threads/defense-of-habitation-bill.289586/">DEFENSE OF
+                        HABITATION BILL</a> - Mentesség biztosítás az illetéktelen behatolókkal szemben alkalmazott
+                    erőszak alkalmazására.</td>
+            </tr>
+
+        </table>
+        <!-- <p style="text-align: center; color: azure; padding-top: 20px;">Ha nem látszódna a -30% gomb, akkor
+            <b>CTRL+F5</b>
+        </p> -->
+    </div>
+    <div class="alja"></div>
+    <div class="osszegzes birsagolo">
+        <p class="osszegzo">Jail (min): <span id="minJailPerc">0</span> perc</p>
+        <p class="osszegzo">Jail (max): <span id="maxJailPerc">0</span> perc</p>
+        <p class="osszegzo">Bírság (min): $<span id="minBirsag">0</span></p>
+        <p class="osszegzo">Bírság (max): $<span id="maxBirsag">0</span></p>
+        <div class="ovadek" style="display: none;"><img src="./img/dollar.png" title="Óvadék adható" alt="óvadék">
+            Óvadék adható</div>
+        <div id="elsoCellakErteke" style="display: inline-block;"></div> <br>
+        <div style="display: inline-block;"><button class="btn vagolap masolasGomb" onclick="masolas()">Másolás</button>
+            <div style="display: inline-block;"><button class="btn torles" onclick="location.reload()">Törlés</button>
+            </div>
+        </div>
+        <!-- <button id="csokkentogomb" class="btn csokkento" onclick="csokkentes = 0.30; osszegzes();">30%</button> !-->
+    </div>
+    <div class="container">
+        <div class="col-12 changelog">
+            <table>
+                <th colspan="2">Changelog <br> <span style="font-size: 16px !important;">Hiba észlelését, ötleteid
+                        jelezd Discordon! <b><a class="nevem" target="_blank"
+                                href="https://discordapp.com/users/310852897179041803">henrock_</a></b></span> 
+                </th>
+                <tr>
+                    <td>
+                        2025.03.01
+                    </td>
+                    <td>
+                        Frissítésre került a Penal Code alapján.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        2024.06.25
+                    </td>
+                    <td>
+                        -35% gomb megszűntetve.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        2024.06.24
+                    </td>
+                    <td>
+                        Frissítésre került a kalkulátor, jelenleg a 2024.06.24-es Penal Code alapján dolgozik a
+                        rendszer. Kibővült a <b>"RENDELETEK"</b> füllel a kalkulátor, Caps Lock-al írt szövegre
+                        kattintva átdob egyenesen a linkre. <br> Jelenleg még ezer és egy bug és elírás található a
+                        kalkulátorban, ennek kiküszöböléseként, ha észleled a hibát, jelezd felém privátban.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        2024.06.13
+                    </td>
+                    <td>
+                        5(09) javítva, mostmár nem "Fogolyszöktetés" mindkettő.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        2024.06.12
+                    </td>
+                    <td>
+                        Másolás gomb mostmár nem ugrik szét, gombok háttere, gomb nyomvatartása esetén is szépen néznek
+                        már ki. <b>2(10.1)</b> mostmár nem piros
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        2024.05.08
+                    </td>
+                    <td>
+                        Elkészült a lecsukható rendszer, amennyiben nem működik, szintén <strong
+                            class="perc">SHIFT+F5</strong> lenyomásával tudod resetelni.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        2024.05.07
+                    </td>
+                    <td>
+                        Elkészült a <strong class="perc">35%</strong>-os gomb. Akinek nem működik <strong
+                            class="perc">SHIFT+F5</strong> lenyomásával tudja resetelni, és működni fog. <br>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+    <footer>
+
+
+
+        <p id="credit">Credit: <a target="_blank" href="https://forum.see-game.com/members/henrock.8246/"
+                class="trinton">henrock</a>,
+            <a class="trinton" target="_blank" href="https://forum.see-game.com/members/trinton.30857/">trinton</a>,
+            karo
+
+        </p>
+    </footer>
+</body>
+
+<script src="js/javascript.js"></script>
+
+</html>

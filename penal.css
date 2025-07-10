@@ -1,0 +1,305 @@
+html{
+    scrollbar-width: none;
+}
+
+body{
+    background-color: #2c3239;
+    font-family: sans-serif;
+}
+.container{
+    width: 65% !important;
+}
+
+table {
+    border-collapse: collapse;
+    width: 65%;
+    margin-bottom: 20px;
+
+}
+table {
+    background-color: #444e58 !important; /* TÃ¡blÃ¡zat hÃ¡ttÃ©rszÃ­ne */
+    color: #dddddd !important; /* TÃ¡blÃ¡zat szÃ¶vegszÃ­ne */
+    border-collapse: collapse; /* Ã–sszeolvadÃ³ hatÃ¡rok */
+
+}
+
+th, td {
+    border: 1px solid black !important; /* Oszlopok Ã©s sorok kÃ¶zÃ¶tti hatÃ¡rok */
+}
+
+th {
+    background-color: #444e58 !important; /* FejlÃ©c hÃ¡ttere */
+}
+table, h1{
+    margin: auto;
+}
+h1{
+    text-align: center;
+    color: #f2f2f2;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.vastag{
+    font-weight: bolder;
+}
+.emeles{
+    font-weight: bolder;
+}
+
+.szurke{
+    color: #9a9b9c;
+}
+.viseles{
+    color: #caca43 !important;
+}
+
+.balra{
+    text-align: left !important;
+}
+
+.rendeletek{
+    text-decoration: underline 2px;
+    color: #487ece;
+}
+
+.nevem{
+    color: #6b1118;
+}
+
+
+
+
+table th:nth-child(3) {
+    width: 6rem; 
+
+  }
+table th:nth-child(4) {
+  width: 6rem; 
+}
+table th:nth-child(5) {
+    width: 6rem !important; 
+}
+table th:nth-child(6) {
+    width: 6rem !important; 
+  }
+table td:nth-child(3), table th:nth-child(3), table th:nth-child(4), table td:nth-child(4),table th:nth-child(5), table td:nth-child(5),table th:nth-child(6), table td:nth-child(6){
+    text-align: center;
+}
+.paragrafus{
+    background-color: #8898a87e  !important;
+}
+b{
+    color: rgb(148, 64, 64);
+}
+.perc, .szin{
+    color: #979744;
+    font-weight: bold;
+}
+
+
+th, td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    cursor: pointer;
+}
+th {
+    background-color: #f2f2f2;
+}
+tr:hover {
+    background-color: #3d464e;
+}
+.kijelolt {
+    background-color: #acd871 !important; 
+    color: black;
+}
+td{
+    text-align: left;
+}
+td:first-child {
+    text-align: center;
+}
+
+.osszegzes{
+    text-align: center;
+    font-size: 13px;
+}
+
+.osszegzogomb{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: #5e5e23;
+    color: #f2f2f2;
+    font-size: 10px;
+}
+.osszegzogomb:hover{
+    color: #f2f2f2 !important;
+    background-color: #5e5e23a9;
+    
+}
+.osszegzo{
+    color: #f2f2f2;
+}
+.irhato{
+    background-color: #2c323979;
+}
+
+footer {
+    display: flex;
+    justify-content: center; /* VÃ­zszintes kÃ¶zÃ©pre igazÃ­tÃ¡s */
+    padding-top: 0.4rem;
+    padding-bottom: 1rem;
+    width: 60%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #444e58;
+    color: #dddddd93;
+    text-align: center;
+    font-variant: small-caps;
+    box-shadow: inset  0px 6px 6px -6px black;
+    margin-left: auto; /* Az elemet kÃ¶zÃ©pre igazÃ­tÃ³ margin */
+    margin-right: auto; /* Az elemet kÃ¶zÃ©pre igazÃ­tÃ³ margin */
+}
+
+.birsagolo{
+    position: fixed;
+    top: 5.54rem;
+    left: 2%;
+    padding: 1rem;
+    max-width: 15rem;
+    background-color: #444e58;
+    color: #dddddd93;
+    text-align: center;
+    box-shadow: inset 0px 0px 6px black;
+    border-radius: 10px;
+}
+
+#elsoCellakErteke{
+    margin-bottom: 0.2rem;
+    color: #f2f2f2;
+}
+.trinton{
+    text-decoration: none;
+    color: #dddddd93;
+}
+.trinton:hover{
+    color: #fff
+}
+.vagolap{
+    background-color: #979744;
+    color: #f2f2f2;
+    font-size: 10px;
+}
+.vagolap:active{
+    background-color: #838337d3 !important;
+    border: 1px solid #838337d3 !important;
+    color: #f2f2f2;
+    font-size: 10px;
+}
+.vagolap:hover{
+    color: #f2f2f2 !important;
+    background-color: #92923fd3;
+    transition: 0.1s;
+}
+.torles{
+    background-color: #922730;
+    color: #f2f2f2;
+    font-size: 10px;
+
+}
+.torles:active{
+    background-color: #751e26 !important;
+    border: 1px solid #751e26 !important;
+    color: #f2f2f2;
+    font-size: 10px;
+
+}
+.torles:hover{
+    background-color: #832129;
+    color: #f2f2f2;
+    font-size: 10px;
+}
+
+#elsoCellakErteke{
+    background-color: #444e58;
+    margin-bottom: 1rem;
+    box-shadow: inset 0px 0px 4px black;
+    padding: 10px;
+    border-radius: 0.4rem;
+}
+
+.alja{
+    margin-bottom: 10rem;
+
+}
+
+h1{
+    margin: 20px;
+}
+footer  p {
+    margin: 0px;
+    padding: 0px;
+}
+footer p:first-child {
+    margin-top: 10px;
+}
+footer p:nth-child(4){
+    margin-bottom: 10px;
+}
+.ovadek{
+    color: white;
+    margin: 0px;
+    padding: 0px;
+}
+.ovadek > img{
+    width: 25px;
+    height: 25px;
+}
+.csokkento{
+    background-color: #9c5056;
+    color: #f2f2f2;
+    font-size: 10px;
+}
+.csokkento:hover{
+    background-color: #914047;
+    color: #f2f2f2;
+    font-size: 10px;
+}
+.csokkento:active{
+    background-color: #914047 !important;
+    color: #f2f2f2;
+    border: 1px solid #914047 !important;
+    font-size: 10px;
+}
+.changelog > table th{
+    background-color: #677381 !important;
+    font-family: sans-serif;
+    font-size: xx-large;
+    text-align: center;
+    letter-spacing: 1px;
+
+}
+.changelog > table{
+    background-color: #444e58 !important;
+}
+.changelog > table {
+
+    border-radius: 15px; /* Itt Ã¡llÃ­thatod be a kerekÃ­tÃ©s mÃ©rtÃ©kÃ©t */
+    overflow: hidden; /* Ez biztosÃ­tja, hogy a tartalom ne lÃ³gjon ki a kerekÃ­tett sarkokbÃ³l */
+}
+.changelog{
+    margin-bottom: 20px;
+}
+.changelog > table tr td:first-child{
+    width: 10rem;
+}
+
+@media (max-width: 1200px) {
+
+    .table,tr,td {
+
+        font-size: 10px !important;
+
+    }
+
+}
+
